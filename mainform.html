@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FORM</title>
+</head>
+<style type="text/css">
+	body{
+		background-color: #1fc8db;
+    background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+	}
+</style>>
+<body>
+	<center><h1>Please provide detailed information</h1></center>
+	<centre><form name="myname" method="post">
+<label><h3>Firstname&nbsp;:</label><input type="textbox" name="Firstname" required="please type name"></h3>
+<label><h3>Lastname&nbsp;:</label><input type="textbox" name="lastname" required="please type name"></h3>
+<h3><label>Roll No.&nbsp;&nbsp;&nbsp;&nbsp;:</label><input type="text" name="rollno" required="please type name"></h3>
+<h3><label>Gender&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label><label>Male</label><input type="radio" name="gender" value="Male">Female</label><input type="radio" name="gender" value="Female"></h3>
+<h3><label>Branch&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label><label>CSE</label><input type="radio" name="Branch" value="CSE">IT</label><input type="radio" name="Branch" value="IT"></h3>
+
+
+<h3><label>State&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+<select name="state" >
+	<option value="0">Select</option>
+<option value="Andhra Pradesh">Andhra Pradesh</option>
+<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+<option value="Assam">Assam</option>
+<option value="Bihar">Bihar</option>
+<option value="Chandigarh">Chandigarh</option>
+<option value="Chhattisgarh">Chhattisgarh</option>
+<option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+<option value="Daman and Diu">Daman and Diu</option>
+<option value="Delhi">Delhi</option>
+<option value="Lakshadweep">Lakshadweep</option>
+<option value="Puducherry">Puducherry</option>
+<option value="Goa">Goa</option>
+<option value="Gujarat">Gujarat</option>
+<option value="Haryana">Haryana</option>
+<option value="Himachal Pradesh">Himachal Pradesh</option>
+<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+<option value="Jharkhand">Jharkhand</option>
+<option value="Karnataka">Karnataka</option>
+<option value="Kerala">Kerala</option>
+<option value="Madhya Pradesh">Madhya Pradesh</option>
+<option value="Maharashtra">Maharashtra</option>
+<option value="Manipur">Manipur</option>
+<option value="Meghalaya">Meghalaya</option>
+<option value="Mizoram">Mizoram</option>
+<option value="Nagaland">Nagaland</option>
+<option value="Odisha">Odisha</option>
+<option value="Punjab">Punjab</option>
+<option value="Rajasthan">Rajasthan</option>
+<option value="Sikkim">Sikkim</option>
+<option value="Tamil Nadu">Tamil Nadu</option>
+<option value="Telangana">Telangana</option>
+<option value="Tripura">Tripura</option>
+<option value="Uttar Pradesh">Uttar Pradesh</option>
+<option value="Uttarakhand">Uttarakhand</option>
+<option value="West Bengal">West Bengal</option>
+</select></h3>
+<h3><label>Student's Contact No.:</label><input type="textbox" name="number"></h3>
+<h3><label>Student's E-mail Id:</label><input type="textbox" name="E-mail"></h3>
+<h3><label>Languages Learn :</label><select name="lang"><option value="0">select</option>
+<option value="C">C</option>
+<option value="C#">C#</option>
+<option value="C++">C++</option>
+<option value="HTM">HTML & CSS</option>
+<option value="JAVA">JAVA</option>
+<option value="Javascript">Javascript</option>
+<option value="Python">Python</option>
+<option value="Ruby">Ruby</option>
+<option value="Go">GO</option>
+<option value="NONE">None</option></select></h3>
+<h3><label>Area of interest:</label><select name="aoi"><option value="0">select</option>
+	<option value="Artificial Intelligence">Artificial Intelligence</option>
+	<option value="Android Development">Android Development</option>
+	<option value="CYBER">Ethical Hacking</option>
+	<option value="GAME">Game Development</option>
+	<option value="Web">Web Development</option>
+    <option value="Machine learningl">Machine Learning</option>
+    <option value="Networkings">Networking</option>
+	<option value="Robotics">Robotics</option>
+	<option value="NONE">Not Decided Yet</option></select></h3>
+<h3><label>Sports :</label><select name="sports"><option value="0">select</option>
+	<option value="Atheletics">Atheletics</option>
+	<option value="basketball">Basketball</option>
+	<option value="Badminton">Badminton</option>
+	<option value="Carrom">Carrom</option>
+	<option value="Chess">Chess</option>
+	<option value="cricket">Cricket</option>
+	<option value="Football">Football</option>
+	<option value="volleyball">Volleyball</option>
+	<option value="hockey">Hockey</option>
+	<option value="table tennis">Table tennis</option>
+	<option value="NONE">Not Interested </option></select></h3>
+	<h3><label><input type="checkbox" name="agree" required="">I here by declare that all the information provided above are correct with my best knowledge</label></h3>
+	<input type="submit" onclick="validateForm()">
+	</form></center>
+	<script type="text/javascript">
+		function validateForm() {
+  var x = document.forms["myname"]["Firstname"].value;
+  if (x == "") {
+    alert("Enter valid name");
+    return false;
+  }
+ var regex = /^[a-zA-Z]+$/;
+  if(regex.test(x)==false){
+alert("Enter a valid user name ");
+return false;
+}
+  x = document.forms["myname"]["lastname"].value;
+  if (x == "" ) {
+    alert("Name must be correct");
+    return false;
+  }
+  if(regex.test(x)==false){
+alert("Enter a valid name ");
+return false;}
+x = document.forms["myname"]["rollno"].value;
+  if (x == "" ) {
+    alert(" Enter your roll no");
+    return false;
+  }
+  var reg=/^[0-9]+$/;
+  if(reg.test(x)==false){
+alert("Enter a valid roll no ");
+return false;
+}
+if(x.length!==8)
+{ 
+	alert(" roll no must be of 8 digit");
+	return false;
+}
+x = document.forms["myname"]["number"].value;
+  if (x == "" ) {
+    alert(" Enter contact number");
+    return false;
+  }
+  var reg=/^[0-9]+$/;
+  if(reg.test(x)==false){
+alert("Enter a valid number ");
+return false;
+}
+if(x.length!==10)
+{ 
+	alert(" Phone no must be of 10 digit");
+	return false;
+}
+var r= /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+x = document.forms["myname"]["E-mail"].value;
+ if(r.test(x)==false){
+alert("Enter a valid E-mail ");
+return false;
+}
+x = document.forms["myname"]["state"].value;
+ if(x===0 || x===''){
+alert("Select the state");
+return false;
+}
+x = document.forms["myname"]["Branch"].value;
+ if(x===0 || x===''){
+alert("Select the Branch");
+return false;
+}
+x = document.forms["myname"]["gender"].value;
+ if(x===0 || x===''){
+alert("Select the gender");
+return false;
+}
+x = document.forms["myname"]["aoi"].value;
+ if(x===0 || x===''){
+alert("Select the state");
+return false;
+}
+x = document.forms["myname"]["sports"].value;
+ if(x===0 || x===''){
+alert("Select the sports");
+return false;
+}
+  x = document.forms["myname"]["lang"].value;
+ if(x===0 || x===''){
+alert("Select the state");
+return false;
+}
+  
+}
+	</script>
+</body>
+</html>
